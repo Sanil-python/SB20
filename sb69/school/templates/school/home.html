@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Enter Details</title>
+    <style>
+        table,th,tr,td {
+            border:1px solid black
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h3>Exam Center Information</h3>
+        <th>ID</th>
+        <th>Exam Center name</th>
+        <th>Exam Center City</th>
+        {% for ec in ecs %}
+        <tr>
+            <td>{{ec.id}}</td>
+            <td>{{ec.cname}}</td>
+            <td>{{ec.city}}</td>
+        </tr>
+        {% endfor %}
+    </table>    
+    <table>
+        <h3>Proxy Exam Center Information</h3>
+        <th>ID</th>
+        <th>Exam Center name</th>
+        <th>Exam Center City</th>
+        {% for pec in pecs %}
+        <tr>
+            <td>{{pec.id}}</td>
+            <td>{{pec.cname}}</td>
+            <td>{{pec.city}}</td>
+        </tr>
+        {% endfor %}
+    </table> 
+</body>
+</html>
